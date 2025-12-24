@@ -6,9 +6,8 @@ const redis = new Redis({
 });
 
 export default async function handler(req, res) {
-  // CORS headers
   res.setHeader('Access-Control-Allow-Origin', '*');
-  res.setHeader('Access-Control-Allow-Methods', 'GET, POST');
+  res.setHeader('Access-Control-Allow-Methods', 'GET, POST, OPTIONS');
   res.setHeader('Access-Control-Allow-Headers', 'Content-Type');
   
   if (req.method === 'OPTIONS') {
@@ -20,15 +19,20 @@ export default async function handler(req, res) {
       let config = await redis.get('appConfig');
       
       if (!config) {
-        const response = await fetch('https://raw.githubusercontent.com/RAJ-af/ADRDUB/main/public/config.json');
-        config = await response.json();
-        await redis.set('appConfig', JSON.stringify(config));
+        const defaultConfig = {
+          appName: "Anime Streaming App",
+          heroTitle: "Watch Your Favorite Anime",
+          features: ["HD Quality", "Fast Streaming", "Multiple Languages"]
+        };
+        await redis.set('appConfig', JSON.stringify(defaultConfig));
+        config = defaultConfig;
       } else if (typeof config === 'string') {
         config = JSON.parse(config);
       }
       
       return res.status(200).json(config);
     } catch (error) {
+      console.error('GET Error:', error);
       return res.status(500).json({ error: error.message });
     }
   }
@@ -37,17 +41,18 @@ export default async function handler(req, res) {
     try {
       const { password, config } = req.body;
       
-      if (password !== 'admin@123') {
-        return res.status(401).json({ error: 'Wrong password' });
+      if (!password || password !== 'admin@123') {
+        return res.status(401).json({ error: 'Unauthorized' });
       }
       
       await redis.set('appConfig', JSON.stringify(config));
-      return res.status(200).json({ success: true });
-    }
+      return res.status(200).json({ success: true, message: 'Config updated' });
     } catch (error) {
+      console.error('POST Error:', error);
       return res.status(500).json({ error: error.message });
     }
   }
   
   return res.status(405).json({ error: 'Method not allowed' });
 }
+

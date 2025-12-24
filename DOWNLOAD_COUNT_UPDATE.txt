@@ -1,0 +1,47 @@
+========================================
+DOWNLOAD COUNT KAISE UPDATE KARE
+========================================
+
+METHOD 1: WEBSITE PE (Quick)
+----------------------------
+1. Website kholo
+2. Download count pe triple-click karo
+3. "+1" button dikha dega
+4. Click karke increment karo
+5. Auto-save hoga 1 min baad
+
+METHOD 2: ADMIN PANEL (Detailed)
+---------------------------------
+1. Browser me jao: localhost:5173/admin
+2. Quick actions use karo:
+   - +1 Download
+   - +10 Downloads
+   - +100 Downloads
+   - +1000 Downloads
+3. Ya custom count daal do
+
+METHOD 3: MANUAL FILE EDIT
+---------------------------
+1. Open: public/downloads.json
+2. Change number:
+   {
+     "totalDownloads": 15000,
+     "lastUpdated": "2025-12-24T18:00:00Z"
+   }
+3. Save file
+4. Refresh website
+
+========================================
+DOWNLOAD LINK CHANGE
+========================================
+public/config.json me:
+"apkDownloadUrl": "YOUR_NEW_LINK"
+
+Koi bhi link use kar sakte ho:
+- MediaFire
+- Google Drive
+- Telegram
+- Dropbox
+- Direct server link
+
+========================================

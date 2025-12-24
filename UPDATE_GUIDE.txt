@@ -1,0 +1,66 @@
+========================================
+ADR DUBBED - UPDATE KAISE KARE
+========================================
+
+📝 KYA UPDATE KAR SAKTE HO:
+1. Download link
+2. App name
+3. Version number
+4. Screenshots
+5. Telegram links
+6. Statistics (downloads, rating)
+
+========================================
+📁 FILE LOCATION:
+public/config.json
+
+========================================
+✏️ KAISE UPDATE KARE:
+
+1. Open: public/config.json
+
+2. Edit values:
+
+   Download Link Change:
+   "apkDownloadUrl": "YOUR_NEW_MEDIAFIRE_LINK"
+
+   App Name Change:
+   "appName": "NEW NAME"
+
+   Version Update:
+   "version": "1.4"
+   "lastUpdate": "25 Dec 2025"
+
+   Downloads Update:
+   "downloads": "15,234"
+
+   Screenshots Change:
+   - Public folder me naye screenshots rakho
+   - Names: screenshot-1.jpg, screenshot-2.jpg, etc.
+   
+   "screenshots": [
+     "/screenshot-1.jpg",
+     "/screenshot-2.jpg",
+     "/screenshot-3.jpg",
+     "/screenshot-4.jpg"
+   ]
+
+3. Save file
+
+4. Refresh website - automatic update!
+
+========================================
+⚠️ DHYAN RAKHO:
+- Double quotes use karo ("")
+- Commas mat bhulo
+- JSON format galat mat karo
+
+========================================
+🔧 TEST KAISE KARE:
+1. Edit config.json
+2. Save
+3. Browser me Ctrl+F5 (hard refresh)
+4. Changes dikhengi
+
+========================================
+

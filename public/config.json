@@ -1,0 +1,37 @@
+{
+  "appName": "ADR DUBBED",
+  "developer": "ADR Team",
+  "developerUsername": "@adrAshish98",
+  "tagline": "Watch anime in Hindi. Updated daily.",
+
+  "version": "1.3",
+  "size": "40.0 MB",
+  "downloads": "10482",
+  "lastUpdate": "23 Dec 2025",
+  "releaseDate": "19 Dec 2025",
+  "rating": "4.8",
+  "reviewCount": "1247",
+
+  "logoUrl": "https://i.ibb.co/23SJjDGX/logo.jpg",
+  "apkDownloadUrl": "https://download2268.mediafire.com/kvmff7ol16tgz3fZMG4NKJn3CPsMeMHoxZEq1RApgMj91f3UdfDwgB_zIUZRoWKNSKgN6rxbP_NnZ8N_SOOzKnWOpdnfPOI1XRdO2UZfV3eTkekzalylOw4ziHIRoAWXW-kuXwVgdZtB-YfjjbeLUPzqyVe9y1IfMquiZY4EU6maMjM/b6k11wralgoh21y/ADR+DUBBED+%281.3%29.apk",
+
+  "screenshots": [
+    "https://i.ibb.co/YTkH1Nvm/homepage.jpg",
+    "https://i.ibb.co/CpYfmXGD/Screenshot-2025-12-24-19-24-47-83-645cdd5b02503a003d66077882753002.jpg",
+    "https://i.ibb.co/6R35q7tq/Screenshot-2025-12-24-19-25-15-23-645cdd5b02503a003d66077882753002.jpg",
+    "https://i.ibb.co/23SJjDGX/logo.jpg"
+  ],
+
+  "screenshotCaptions": [
+    "Home screen",
+    "Search anime",
+    "Download episodes",
+    "App logo"
+  ],
+
+  "telegram": {
+    "channelUrl": "https://t.me/ADR_Hindi_dubbed",
+    "supportUrl": "https://t.me/adrAshish98"
+  }
+}
+
